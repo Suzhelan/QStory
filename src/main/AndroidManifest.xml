@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        >
+    <!--读取应用列表-->
+    <uses-permission
+            android:name="android.permission.QUERY_ALL_PACKAGES"
+            tools:ignore="QueryAllPackagesPermission"
+            />
+    <!-- 读取共享存储空间中的内容 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- 修改或删除共享存储空间中的内容 -->
+    <uses-permission
+            android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+            tools:ignore="ProtectedPermissions"
+            />
+    <!--网络请求权限-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+
+
+    <application
+            android:name="lin.xposed.app.App"
+            android:icon="@mipmap/icon"
+            android:label="@string/module_name"
+
+            android:usesCleartextTraffic="true"
+            android:allowBackup="true"
+            android:resizeableActivity="true"
+            android:supportsRtl="true"
+            >
+
+        <activity
+                android:name="lin.xposed.app.MainActivity"
+                android:theme="@style/NoTitle"
+                android:exported="true"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+                android:name="lin.xposed.app.MainActivity.hide"
+                android:targetActivity="lin.xposed.app.MainActivity"
+                android:exported="true"
+        >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS"/>
+
+            </intent-filter>
+        </activity-alias>
+        <meta-data
+                android:name="xposedmodule"
+                android:value="true"
+        />
+        <meta-data
+                android:name="xposeddescription"
+                android:value="QQ功能性模块 仅供学习交流 下载后请在24小时内删除 请勿用作商业用途
+                 @言子"
+        />
+        <meta-data
+                android:name="xposedminversion"
+                android:value="83"
+                />
+        <meta-data
+                android:name="xposedscope"
+                android:resource="@array/xposed_scope"/>
+    </application>
+
+</manifest>

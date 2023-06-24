@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/base_layout_shape"
+        >
+    <!-- 布局高度指定50dp 如果匹配父布局的话删除此布局里面的布局就不会再匹配父布局
+        这在一个功能没有填写详细信息(info)时会自动删除id/item-info的布局导致大小和其他的item不均是不美观的-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toStartOf="@+id/CheckBox_item"
+            android:orientation="vertical"
+            android:id="@+id/CheckBox_item_text_layout"
+            android:gravity="center_vertical"
+            >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_name_CheckBox"
+                android:textSize="15sp"
+                android:text="Name"
+                android:textColor="@color/text_color"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="3dp"
+                />
+    </LinearLayout>
+
+    <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            style="@style/MyCheckBox"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/CheckBox_item"
+            android:layout_marginEnd="20dp"
+            />
+</RelativeLayout>

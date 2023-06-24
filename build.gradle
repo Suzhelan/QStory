@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+}
+
+
+android {
+    compileSdk 33
+    ndkVersion "23.1.7779620"
+    namespace "lin.xposed"
+    defaultConfig {
+        applicationId "lin.xposed"
+        minSdk 29
+        //noinspection OldTargetApi
+        targetSdk 33
+        versionCode 39
+        if (versionCode < 10) {
+            versionName "0.0.${versionCode}"
+        } else {
+            int v = versionCode
+            String name = "0.3.9"
+            /*for (int i = 0; v > 10; i++) {
+                v - 10
+                if (v < 10 ) {
+                    versionName =  "0.${i}.${v}"
+                }
+            }*/
+            versionName name
+        }
+//        versionName "${versionCode}"
+        multiDexEnabled false
+        signingConfigs {
+            release {
+                enableV1Signing = true
+                enableV2Signing = true
+                enableV3Signing = true
+            }
+        }
+        resConfigs "zh-rCN", "zh"
+        //明确设备ABI
+        ndk {
+            abiFilters "arm64-v8a"
+        }
+    }
+
+    buildTypes {
+        customDebugType {
+            debuggable true
+        }
+        //是否压缩大小
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    androidResources {
+        additionalParameters '--allow-reserved-package-id', '--package-id', '0x56'
+    }
+
+    externalNativeBuild {
+        cmake {
+            version '3.18.1'
+            path './src/main/cpp/CMakeLists.txt'
+        }
+    }
+    android.applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach {
+            outputFileName = "QStory_${versionName}.apk"
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.7.0-alpha02'
+    implementation 'com.google.android.material:material:1.9.0-alpha01'
+
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])//import dir All jar
+
+    implementation 'com.github.kyuubiran:EzXHelper:2.0.0'//往res注入模块资源用的
+    implementation 'org.luckypray:DexKit:1.1.4'//dex分析用的
+}

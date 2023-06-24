@@ -1,0 +1,20 @@
+<resources>
+    <string name="module_name">QStory</string>
+    <string name="module_packageName">lin.xposed</string>
+    <string name="save_voice">保存语音</string>
+    <string name="SaveNoName">不输入名称将以时间命名</string>
+    <string name="关于">\n\n
+        本XPosed模块是免费模块\n
+        请勿用于违法或商业行为\n
+        如若不喜欢请卸载使用其他模块\n
+        可能有太多时间与技术维护此模块\n
+        会在上方按钮的tg频道进行版本发布\n
+        谢谢你的使用\n\n\n\n
+        于此感谢@QTool的开源学习\n
+        本模块也从始至终以学习为目的维护
+        firstBuildDate 2023-4-25 @言子 \n
+        asmclk@163.com
+    </string>
+    <string name="button_close">取消</string>
+    <string name="button_yes_sava">保存</string>
+</resources>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                >
+
+            <LinearLayout
+                    android:padding="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shadow_demo"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    >
+
+                <TextView
+                        android:textSize="35sp"
+                        android:layout_width="match_parent"
+                        android:text="@string/module_name"
+                        android:textColor="@color/若绿"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        />
+
+                <TextView
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:text="QQ功能性Xposed模块"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/base_layout_card"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                    <ImageView
+                            android:layout_marginStart="20dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/qq_icon"
+                            />
+
+                    <TextView
+                            android:layout_marginStart="20dp"
+                            android:id="@+id/QQ_Version"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="QQ 版本 : "
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:paddingTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                    <ImageView
+                            android:layout_marginStart="20dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/module_icon"
+                            />
+
+                    <TextView
+                            android:layout_marginStart="20dp"
+                            android:id="@+id/module_Version"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="模块版本 : "
+                            />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <include layout="@layout/update_menu_layout"/>
+
+            <LinearLayout
+                    android:id="@+id/main_add_tg_1"
+                    android:layout_margin="20dp"
+                    android:elevation="6dp"
+                    android:translationZ="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_layout_card"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:clickable="false"
+                        android:padding="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text="TG版本构建频道\n https://t.me/WhenFlowersAreInBloom"
+                        android:textSize="15sp"
+                        />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/main_add_tg_2"
+                    android:layout_margin="20dp"
+                    android:elevation="6dp"
+                    android:translationZ="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_layout_card"
+                    android:orientation="horizontal"
+                    >
+
+                <TextView
+                        android:clickable="false"
+                        android:padding="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text="TG聊天群组\n https://t.me/AnQChat"
+                        android:textSize="15sp"
+                />
+            </LinearLayout>
+
+            <!--<LinearLayout
+                    android:id="@+id/main_button3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:elevation="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:translationZ="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/base_layout_card"
+                    android:orientation="horizontal"
+            >
+
+                <TextView
+                        android:clickable="false"
+                        android:padding="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text="下载最新版"
+                        android:textSize="15sp"
+                />
+
+            </LinearLayout>-->
+
+            <CheckBox
+                    android:textSize="15dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/hideIcon"
+                    style="@style/MyCheckBox"
+                    android:text="隐藏模块图标"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+            />
+            <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

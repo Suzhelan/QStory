@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <TextView
+            android:id="@+id/common_edittext_title"
+            android:textColor="@color/text_color"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="保存数据"
+            android:textSize="17sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    <include layout="@layout/base_edit_text"/>
+
+    <include layout="@layout/base_2button"/>
+</LinearLayout>

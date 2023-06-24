@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/white_shape"
+        android:padding="20dp"
+        >
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有新版本  "
+            android:id="@+id/pseee"
+            android:textColor="@color/露草色"
+            android:textSize="20sp"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 33 "
+            android:id="@id/newVersion"
+            android:layout_alignBottom="@+id/pseee"
+            android:layout_toEndOf="@+id/pseee"
+            android:textColor="@color/露草色"
+            android:textSize="20sp"
+            />
+
+    <ScrollView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pseee"
+            >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新日志 没有"
+                    android:id="@id/UpdateLog"
+
+                    android:layout_below="@id/pseee"
+                    android:textColor="@color/露草色"
+                    android:textSize="20sp"
+                    />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+            android:background="@drawable/base_layout_card"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="更新"
+            android:id="@+id/start_update"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/露草色"
+            android:textSize="20sp"
+            />
+</RelativeLayout>

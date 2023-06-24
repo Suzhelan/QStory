@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_color">#000000</color>
+    <color name="杜若色">#426ab3</color>
+    <color name="桔梗色">#585eaa</color>
+    <color name="蔷薇色">#f05b72</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="若绿">#7fb80e</color>
+    <color name="银鼠">#a1a3a6</color>
+    <color name="白绿">#cde6c7</color>
+    <color name="生成色">#f6f5ec</color>
+    <color name="桜色">#feeeed</color>
+    <color name="胡粉色">#fffef9</color>
+    <color name="秘色">#76becc</color>
+    <color name="露草色">#33a3dc</color>
+</resources>

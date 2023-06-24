@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/main_update"
+        android:layout_margin="20dp"
+        android:elevation="6dp"
+        android:translationZ="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_layout_card"
+        android:orientation="horizontal"
+        >
+
+    <TextView
+            android:clickable="false"
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="检测更新\nDetect if there is a version update"
+            android:textSize="15sp"
+            />
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:text="去更新"
+            android:id="@+id/startUpdate"
+            />
+
+</RelativeLayout>
